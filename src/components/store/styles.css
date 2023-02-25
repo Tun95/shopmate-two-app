@@ -1,0 +1,91 @@
+.store .filter {
+  padding: 30px;
+  height: 90vh;
+}
+.chead h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.chead h1:nth-child(2) {
+  opacity: 0.5;
+  border-left: 3px solid rgba(0, 0, 0, 0.5);
+  padding-left: 70px;
+}
+.store .category .box {
+  background-color: #f6f9fc;
+  margin: 15px 0;
+  padding: 5px 10px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.store .category img {
+  width: auto;
+  height: auto;
+}
+.store .category .box:hover {
+  background-color: #fff;
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+}
+.store .box2 {
+  margin-top: 100px !important;
+  text-align: center;
+}
+.store .category button {
+  padding: 10px;
+  background: none;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.store .contentWidth {
+  margin-left: 30px;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ 
+}
+.store .product img {
+  width: 100%;
+  height: 100%;
+}
+.store .product {
+  transition: 0.5s;
+}
+.store .product:hover {
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+}
+
+/*-----filter---*/
+
+.filter {
+  width: 500px;
+  min-height: 660px;
+  max-height: 660px;
+}
+@media screen and (max-width: 1200px) {
+  .grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+@media screen and (max-width: 550px) {
+  .filter {
+    width: 100%;
+    padding: 0px;
+  }
+  .store {
+    width: 100%;
+    display: grid;
+    justify-self: center;
+  }
+  .store .contentWidth {
+    margin-left: 0px;
+  }
+}

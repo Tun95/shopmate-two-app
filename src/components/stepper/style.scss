@@ -1,0 +1,181 @@
+.form_container {
+  .form_box_content {
+    min-height: 400px;
+    .submit_btn {
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      top: 20px;
+    }
+    .delivery {
+      margin-top: 20px;
+      h3 {
+        color: #6c6c6c;
+      }
+      .choose_method_box {
+        .payment_label {
+          border: 2px solid #b4b4b4;
+          background-color: #f7f7f7;
+          width: 100%;
+          min-height: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          text-align: center;
+          input {
+            cursor: pointer;
+          }
+          .label-svg {
+            display: grid;
+            justify-content: center;
+            width: 100%;
+
+            .input_text {
+              display: flex;
+              justify-content: center;
+            }
+            img {
+              width: 50%;
+            }
+          }
+          input {
+            border: 2px solid #b4b4b4;
+            height: 25px;
+            width: 25px;
+            padding-left: 0px;
+            outline-color: #2451e6;
+            margin-right: 2px;
+          }
+        }
+        .active.payment_label {
+          border: 2px solid #6eb2fb;
+          background-color: #e5f1ff;
+        }
+      }
+    }
+    .confirmtion {
+      .confirmation_box {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 20px;
+        h3 {
+          color: #6c6c6c;
+        }
+        h4 {
+          color: #b4b4b4;
+        }
+        .table {
+          max-height: 400px;
+        }
+        .table::-webkit-scrollbar {
+          display: none;
+        }
+        .delivery_info {
+          h4 {
+            margin-top: 10px;
+          }
+          .small_text {
+            color: #6c6c6c;
+          }
+          .table_content {
+            margin-top: 64px;
+            padding-right: 20px;
+            h3 {
+              margin-bottom: 10px;
+            }
+            .tableLabel {
+              font-weight: 600;
+              color: #6c6c6c;
+            }
+          }
+        }
+      }
+    }
+    .payment {
+      .choose_method {
+        width: 100%;
+        .choose_method_box {
+          width: 80%;
+          .payment_label {
+            border: 2px solid #b4b4b4;
+            background-color: #f7f7f7;
+            width: 100%;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-align: center;
+            input {
+              cursor: pointer;
+            }
+            .label-svg {
+              display: grid;
+              justify-content: center;
+              width: 100%;
+              // .svg_text {
+              //   display: grid;
+              //   justify-content: center;
+              // }
+              .input_text {
+                display: flex;
+                justify-content: center;
+              }
+              img {
+                width: 50%;
+              }
+            }
+            input {
+              border: 2px solid #b4b4b4;
+              height: 25px;
+              width: 25px;
+              padding-left: 0px;
+              outline-color: #2451e6;
+              margin-right: 2px;
+            }
+          }
+          .active.payment_label {
+            border: 2px solid #6eb2fb;
+            background-color: #e5f1ff;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .form_container {
+    .form_box_content {
+      .payment {
+        .choose_method {
+          .choose_method_box {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .form_container {
+    .form_box_content {
+      .confirmtion {
+        .confirmation_box {
+          display: flex;
+          grid-template-columns: 100%;
+          flex-direction: column-reverse;
+          .delivery_info {
+            .table_content {
+              margin-top: 10px;
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
