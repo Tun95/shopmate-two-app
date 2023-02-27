@@ -1,39 +1,9 @@
-.side-bar {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-end;
-  z-index: 5000;
-  position: fixed;
-  overflow-y: scroll;
-  top: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-
-  .side-bar-box {
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    li {
-      color: #fff;
-    }
-    .side_bar_list {
-      .bar_link li {
-        background-color: #0c2a4d;
-        height: 60px;
-        width: 100%;
-      }
-      .bar_list {
-        li {
-          padding: 10px;
-        }
-        li:hover {
-          // background-color: rgba(70, 70, 70, 0.8);
-          background-color: rgba(0, 0, 0, 0.4);
-        }
-      }
-    }
+.menu_btn_icon {
+  .menu_icon {
+    font-size: 40px !important;
+    color: #e94560;
   }
 }
-.side-bar::-webkit-scrollbar {
-  display: none;
+.side_bar_links {
+  
 }

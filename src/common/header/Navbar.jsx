@@ -3,8 +3,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  
-
   return (
     <div>
       <header className="header">
@@ -36,22 +34,6 @@ function Navbar() {
                 <Link to="/contact">contact</Link>
               </li>
             </ul>
-
-            {/* {MobileMenu ? (
-              <button
-                className="toggle"
-                onClick={() => setMobileMenu(!MobileMenu)}
-              >
-                <i className="fas fa-times close home-btn"></i>
-              </button>
-            ) : (
-              <button
-                className="toggle toggle-btn"
-                onClick={() => setMobileMenu(!MobileMenu)}
-              >
-                <i className="fa fa-bars open"></i>
-              </button>
-            )} */}
           </div>
         </div>
       </header>

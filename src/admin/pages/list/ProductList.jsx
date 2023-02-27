@@ -153,7 +153,7 @@ function ProductList() {
       renderCell: () => {
         return (
           <div className="cellAction">
-            <Link to="/admin/product/78578" style={{ textDecoration: "none" }}>
+            <Link to="/admin/product/78578/edit" style={{ textDecoration: "none" }}>
               <div className="viewButton">View</div>
             </Link>
             <div className="deleteButton">Delete</div>

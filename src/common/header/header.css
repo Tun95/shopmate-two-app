@@ -89,10 +89,33 @@
   font-size: 12px;
   color: #fff;
 }
+.search .icon {
+  margin-left: 5px;
+}
 .search .f_flex {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+.search.active {
+  height: 12vh;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.search .fa-user {
+  margin-right: 10px;
+}
+.search .MuiPopover-paper {
+  position: relative;
+  right: 140px;
+}
+.search .menu_bar {
+  display: none;
 }
 /*------search-----------*/
 
@@ -138,19 +161,7 @@
 .open {
   display: none;
 }
-.search.active {
-  height: 12vh;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
-}
-.search .fa-user {
-  margin-right: 10px;
-}
+
 @media (max-width: 1031px) {
   #display-none {
     display: none;
@@ -160,11 +171,15 @@
   .header .navlink {
     display: none;
   }
+  .search .menu_bar {
+    display: block;
+  }
 }
 @media (max-width: 860px) {
   .search .search-box {
     display: none;
   }
+
   .topbar {
     display: none;
   }

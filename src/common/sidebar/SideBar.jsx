@@ -1,72 +1,186 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import MenuIcon from "@mui/icons-material/Menu";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import PlaceIcon from "@mui/icons-material/Place";
+import HomeIcon from "@mui/icons-material/Home";
+import StoreIcon from "@mui/icons-material/Store";
+import CallIcon from "@mui/icons-material/Call";
+import LineStyleIcon from "@mui/icons-material/LineStyle";
+import Inventory2Icon from "@mui/icons-material/Inventory2";
+import PeopleIcon from "@mui/icons-material/People";
+import BadgeIcon from "@mui/icons-material/Badge";
+import WarehouseIcon from "@mui/icons-material/Warehouse";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 function SideBar() {
+  const [state, setState] = React.useState({
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const userItemList = [
+    {
+      text: "My Profile",
+      icon: <AccountCircleIcon style={{ fill: "black" }} />,
+      to: "/profile", // <-- add link targets
+    },
+    {
+      text: "Wish List",
+      icon: <FavoriteIcon style={{ fill: "black" }} />,
+      to: "/wish-list",
+    },
+    {
+      text: "Track Orders",
+      icon: <PlaceIcon style={{ fill: "black" }} />,
+      to: "/track-order",
+    },
+  ];
+
+  const webItemList = [
+    {
+      text: "Home",
+      icon: <HomeIcon style={{ fill: "black" }} />,
+      to: "/", // <-- add link targets
+    },
+    {
+      text: "Store",
+      icon: <StoreIcon style={{ fill: "black" }} />,
+      to: "/store",
+    },
+    {
+      text: "Contact",
+      icon: <CallIcon style={{ fill: "black" }} />,
+      to: "/contact",
+    },
+  ];
+  const adminItemList = [
+    {
+      text: "Dashboard",
+      icon: <LineStyleIcon style={{ fill: "black" }} />,
+      to: "/admin/dashboard", // <-- add link targets
+    },
+    {
+      text: "Products",
+      icon: <Inventory2Icon style={{ fill: "black" }} />,
+      to: "/admin/products",
+    },
+    {
+      text: "Users",
+      icon: <PeopleIcon style={{ fill: "black" }} />,
+      to: "/admin/users",
+    },
+    {
+      text: "Vendors",
+      icon: <BadgeIcon style={{ fill: "black" }} />,
+      to: "/admin/vendors",
+    },
+    {
+      text: "Orders",
+      icon: <WarehouseIcon style={{ fill: "black" }} />,
+      to: "/admin/orders",
+    },
+    {
+      text: "Settings",
+      icon: <SettingsIcon style={{ fill: "black" }} />,
+      to: "/admin/settings",
+    },
+  ];
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {userItemList.map((item, index) => {
+          const { text, icon } = item;
+          return (
+            <ListItem disablePadding component={Link} to={item.to} key={text}>
+              <ListItemButton>
+                {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+      <Divider />
+      <Divider />
+      <List>
+        {webItemList.map((item, index) => {
+          const { text, icon } = item;
+          return (
+            <ListItem disablePadding component={Link} to={item.to} key={text}>
+              <ListItemButton>
+                {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+      <Divider />
+      <Divider />
+      <List>
+        {adminItemList.map((item, index) => {
+          const { text, icon } = item;
+          return (
+            <ListItem disablePadding component={Link} to={item.to} key={text}>
+              <ListItemButton>
+                {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
+      </List>
+    </Box>
+  );
+
   return (
-    <>
-      {/* <div className="side-bar">
-        <div className="side-bar-box">
-          <ul className="side_bar_list">
-            <span className="bar_link">
-              <li>BAR</li>
-            </span>
-            <Link to="" className="bar_list">
-              <li>My Profile</li>
-            </Link>
-            <Link to="" className="bar_list">
-              <li>Wish List</li>
-            </Link>
-            <Link to="" className="bar_list">
-              <li>My Profile</li>
-            </Link>
-            <hr />
-            <hr />
-            <Link to="/" className="bar_list">
-              <li>Home</li>
-            </Link>
-            <Link to="/store" className="bar_list">
-              <li>Store</li>
-            </Link>
-            <Link to="" className="bar_list">
-              <li>User Account</li>
-            </Link>
-            <Link to="" className="bar_list">
-              <li>Vendor Account</li>
-            </Link>
-            <Link to="/track-order" className="bar_list">
-              <li>Track My Order</li>
-            </Link>
-            <Link to="/contact" className="bar_list">
-              <li>Contact</li>
-            </Link>
-            <hr />
-            <hr />
-            <Link to="/admin/dashboard" className="bar_list">
-              <li>Dashboard</li>
-            </Link>
-            <Link to="/admin/products" className="bar_list">
-              <li>Products</li>
-            </Link>
-            <Link to="/admin/users" className="bar_list">
-              <li>Users</li>
-            </Link>
-            <Link to="/admin/vendors" className="bar_list">
-              <li>Vendors</li>
-            </Link>
-            <Link to="/admin/orders" className="bar_list">
-              <li>Orders</li>
-            </Link>
-            <Link to="/admin/settings" className="bar_list">
-              <li>Settings</li>
-            </Link>
-            <span className="bar_link bar_link_bottom">
-              <li>BAR</li>
-            </span>
-          </ul>
-        </div>
-      </div> */}
-    </>
+    <div>
+      {["right"].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button
+            className="menu_btn_icon"
+            onClick={toggleDrawer(anchor, true)}
+          >
+            <MenuIcon className="menu_icon" />
+          </Button>
+          <Drawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+          >
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </div>
   );
 }
 

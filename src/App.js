@@ -12,7 +12,6 @@ import Dashboard from "./admin/pages/home/Dashboard";
 import ProductList from "./admin/pages/list/ProductList";
 import UserList from "./admin/pages/list/UserList";
 
-import ProductInfo from "./admin/pages/single/ProductInfo";
 import UserInfo from "./admin/pages/single/UserInfo";
 import NewUser from "./admin/pages/new/NewUser";
 import "./style/dark.scss";
@@ -106,8 +105,7 @@ function App() {
             console.log("onMessengerLoad");
           }}
         /> */}
-
-        <Header cartItems={cartItems} />
+       <Header cartItems={cartItems} />
         <Routes>
           <Route
             path="/"
@@ -164,17 +162,12 @@ function App() {
 
           {/* ADMIN ROUTES */}
           <Route path="/admin/dashboard" element={<Dashboard />}></Route>
-          <Route path="/admin/products" element={<ProductList />}></Route>
-          <Route path="/admin/productinfo" element={<ProductInfo />}></Route>
           <Route path="/admin/users" element={<UserList />}></Route>
           <Route path="/admin/user/:userId" element={<UserInfo />}></Route>
           <Route path="/admin/user/new" element={<NewUser />}></Route>
           <Route path="/admin/user/:userId/edit" element={<UserEdit />}></Route>
           <Route path="/admin/vendors" element={<VendorList />}></Route>
-          <Route
-            path="/admin/product/:productId"
-            element={<ProductInfo />}
-          ></Route>
+          <Route path="/admin/products" element={<ProductList />}></Route>
           <Route path="/admin/product/new" element={<NewProduct />}></Route>
           <Route
             path="/admin/product/:productId/edit"
