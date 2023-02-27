@@ -62,7 +62,6 @@ function Search({ cartItems }) {
                     width: "200px",
                   },
                 }}
-                onAnimationStartCapture
               >
                 <Typography sx={{ p: 2 }}>
                   <ul className="user_modal_box ">

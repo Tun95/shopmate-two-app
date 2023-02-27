@@ -192,6 +192,12 @@
     top: 10px;
   }
 }
+@media (max-width: 600px) {
+  .search .cart,
+  .user_modal {
+    display: none;
+  }
+}
 @media (max-width: 404px) {
   .head {
     display: none;
