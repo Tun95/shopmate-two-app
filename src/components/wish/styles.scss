@@ -37,7 +37,7 @@
   .wish_container {
     .product-content {
       grid-template-columns: repeat(2, 1fr);
-      // gap: 10px;
+      gap: 10px;
       .product {
         height: auto;
       }

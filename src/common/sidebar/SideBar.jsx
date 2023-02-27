@@ -45,7 +45,7 @@ function SideBar() {
     {
       text: "My Profile",
       icon: <AccountCircleIcon style={{ fill: "black" }} />,
-      to: "/profile", // <-- add link targets
+      to: "/login", // <-- add link targets
     },
     {
       text: "Wish List",
