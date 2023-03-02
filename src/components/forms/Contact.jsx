@@ -74,7 +74,7 @@ function Contact() {
                 <div className="content">
                   <span className="name">
                     <label htmlFor="name">Store:</label>
-                    <div className="">Shopmate Ibadan</div>
+                    <div className="">Shopmate Store</div>
                   </span>
                   <div className="via_contact">
                     <label htmlFor="via">Via Whatsapp:</label>

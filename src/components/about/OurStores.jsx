@@ -20,7 +20,7 @@ function OurStores() {
                   <div className="left_info">
                     <span className="info">
                       <label htmlFor="name">Store:</label>
-                      <h3>Shopmate Lagos</h3>
+                      <h3>Shopmate Store</h3>
                     </span>
                     <span className="info">
                       <label htmlFor="location">LOCATION:</label>
@@ -52,7 +52,7 @@ function OurStores() {
                   <div className="left_info">
                     <span className="info">
                       <label htmlFor="name">Store:</label>
-                      <h3>Shopmate Lagos</h3>
+                      <h3>Shopmate Store</h3>
                     </span>
                     <span className="info">
                       <label htmlFor="location">LOCATION:</label>
@@ -84,7 +84,7 @@ function OurStores() {
                   <div className="left_info">
                     <span className="info">
                       <label htmlFor="name">Store:</label>
-                      <h3>Shopmate Lagos</h3>
+                      <h3>Shopmate Store</h3>
                     </span>
                     <span className="info">
                       <label htmlFor="location">LOCATION:</label>
