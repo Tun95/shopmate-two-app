@@ -164,7 +164,6 @@ function SideBar() {
           );
         })}
       </List>
-      
     </Box>
   );
 
@@ -185,7 +184,11 @@ function SideBar() {
           >
             {list(anchor)}
             <span className="side_bar_search p_flex">
-              <input type="text" className="side_bar_search_box" />
+              <input
+                type="search"
+                placeholder="Search..."
+                className="side_bar_search_box"
+              />
             </span>
           </Drawer>
         </React.Fragment>
