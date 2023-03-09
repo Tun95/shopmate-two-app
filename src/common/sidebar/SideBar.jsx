@@ -24,6 +24,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import BadgeIcon from "@mui/icons-material/Badge";
 import WarehouseIcon from "@mui/icons-material/Warehouse";
 import SettingsIcon from "@mui/icons-material/Settings";
+import logo from "../assets/Shopmate.png";
 
 function SideBar() {
   const [state, setState] = React.useState({
@@ -42,6 +43,11 @@ function SideBar() {
   };
 
   const userItemList = [
+    {
+      text: "",
+      icon: <img src={logo} alt="logo" style={{ width: "220px" }} />,
+      to: "/", // <-- add link targets
+    },
     {
       text: "My Profile",
       icon: <AccountCircleIcon style={{ fill: "black" }} />,
@@ -158,6 +164,7 @@ function SideBar() {
           );
         })}
       </List>
+      
     </Box>
   );
 
@@ -177,6 +184,9 @@ function SideBar() {
             onClose={toggleDrawer(anchor, false)}
           >
             {list(anchor)}
+            <span className="side_bar_search p_flex">
+              <input type="text" className="side_bar_search_box" />
+            </span>
           </Drawer>
         </React.Fragment>
       ))}
