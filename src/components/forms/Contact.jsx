@@ -49,7 +49,7 @@ function Contact() {
                 <div className="content">
                   <span className="name">
                     <label htmlFor="name">Store:</label>
-                    <div className="">Shopmate Ibadan</div>
+                    <div className="">Shopmate store</div>
                   </span>
                   <div className="via_contact">
                     <label htmlFor="via">Via Messenger:</label>

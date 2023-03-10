@@ -25,7 +25,10 @@ import AccountVerify from "./components/forms/AccountVerify";
 import PassResetForm from "./components/forms/PassResetForm";
 import VerifySuccess from "./components/forms/VerifySuccess";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
+
 import { MessengerChat } from "react-messenger-chat-plugin";
+// import MessengerCustomerChat from "react-messenger-customer-chat";
+
 import VendorList from "./admin/pages/list/VendorList";
 import ShippingAddress from "./components/stepper/ShippingAddress";
 import Confirmation from "./components/stepper/Confirmation";
@@ -105,7 +108,7 @@ function App() {
             console.log("onMessengerLoad");
           }}
         /> */}
-       <Header cartItems={cartItems} />
+        <Header cartItems={cartItems} />
         <Routes>
           <Route
             path="/"
@@ -176,6 +179,12 @@ function App() {
           <Route path="/admin/orders" element={<OrderList />}></Route>
           {/* ADMIN ROUTES */}
         </Routes>
+        {/* <MessengerCustomerChat
+          pageId="<PAGE_ID>"
+          appId="<APP_ID>"
+          htmlRef="<REF_STRING>"
+        /> */}
+        
         <FloatingWhatsApp phoneNumber="+2349160921639" accountName="Tunji" />
         <Footer />
       </Router>

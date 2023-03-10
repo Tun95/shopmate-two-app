@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import Box from "@mui/material/Box";
@@ -25,8 +25,11 @@ import BadgeIcon from "@mui/icons-material/Badge";
 import WarehouseIcon from "@mui/icons-material/Warehouse";
 import SettingsIcon from "@mui/icons-material/Settings";
 import logo from "../assets/Shopmate.png";
+import { DarkModeContext } from "../../context/darkModeContext";
 
 function SideBar() {
+  const { darkMode, toggle } = useContext(DarkModeContext);
+
   const [state, setState] = React.useState({
     right: false,
   });
