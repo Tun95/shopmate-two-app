@@ -184,7 +184,7 @@ function App() {
           appId="<APP_ID>"
           htmlRef="<REF_STRING>"
         /> */}
-        
+
         <FloatingWhatsApp phoneNumber="+2349160921639" accountName="Tunji" />
         <Footer />
       </Router>
