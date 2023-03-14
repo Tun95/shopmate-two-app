@@ -1,7 +1,9 @@
 .wrapper {
   text-align: center;
 }
-.wrapper .grid2 {
+.wrapper-grid {
+  display: flex;
+  /* flex-wrap: wrap; */
   grid-gap: 20px;
 }
 .wrapper .img {
@@ -28,6 +30,7 @@
 }
 @media screen and (max-width: 1024px) {
   .wrapper-grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }

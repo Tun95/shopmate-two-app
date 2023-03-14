@@ -27,7 +27,7 @@ function Wrapper() {
   return (
     <>
       <section className="wrapper background">
-        <div className="container grid2 wrapper-grid">
+        <div className="container wrapper-grid">
           {data.map((item, index) => {
             return (
               <div className="product" key={index}>
