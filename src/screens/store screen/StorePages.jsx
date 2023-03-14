@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import FlashDeals from "../components/flashdeals/FlashDeals";
-import Slider from "../components/mainpage/Slider";
+import FlashDeals from "../../components/home/flashdeals/FlashDeals";
+import Slider from "../../components/home/mainpage/Slider";
 
-import Store from "../components/store/Store";
+import Store from "../../components/store/Store";
 
 function StorePages({ productItems, onAdd }) {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import OrderHistory from "../components/orderhistory/OrderHistory";
+import OrderHistory from "../../components/orderhistory/OrderHistory";
 
 function OrderHistoryScreen() {
   return (

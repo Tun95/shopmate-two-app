@@ -45,21 +45,18 @@ footer li {
     margin-top: 10px;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
   .footer-wrap {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 600px) {
   .footer-wrap {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 425px) {
   .footer-wrap {
-    display: grid;
     grid-template-columns: 1fr;
   }
 }

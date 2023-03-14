@@ -1,12 +1,14 @@
-import { useFormik } from "formik";
 import React, { useState } from "react";
-import { newPassSchema } from "../schemas/Index";
 import "./style.scss";
+import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+
 import { Icon } from "react-icons-kit";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";
+import { loginSchema } from "../../components/schemas/Index";
 
-function PassResetForm() {
+function Login() {
   const onSubmit = (values, actions) => {
     setTimeout(() => {
       actions.resetForm();
@@ -16,15 +18,16 @@ function PassResetForm() {
     values,
     errors,
     handleBlur,
-    touched,
     isSubmitting,
+    touched,
     handleChange,
     handleSubmit,
   } = useFormik({
     initialValues: {
+      email: "",
       password: "",
     },
-    validationSchema: newPassSchema,
+    validationSchema: loginSchema,
     onSubmit,
   });
   console.log(errors);
@@ -46,11 +49,25 @@ function PassResetForm() {
     <div className="form-box">
       <div className="form-box-content">
         <form action="" onSubmit={handleSubmit}>
-          <div className="inner-form inner-form-small">
-            <h2>New Password</h2>
-            <p>Enter new password down below</p>
+          <div className="inner-form">
+            <h2>Member Login</h2>
             <div className="form-group">
-              <label htmlFor="password">New Password</label>
+              <label htmlFor="email">Eamil</label>
+              <input
+                type="email"
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={errors.email && touched.email ? "input-error" : ""}
+                id="email"
+                placeholder="Enter your email"
+              />
+              {errors.email && touched.email && (
+                <p className="error">{errors.email}</p>
+              )}
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
               <input
                 type={type}
                 value={values.password}
@@ -60,19 +77,27 @@ function PassResetForm() {
                   errors.password && touched.password ? "input-error" : ""
                 }
                 id="password"
-                placeholder="Enter new password"
+                placeholder="Enter your password"
               />
               <span onClick={handleToggle}>
                 <Icon icon={icon} size={20} className="eye-icon" />
               </span>
               {errors.password && touched.password && (
-                <span className="error">{errors.password}</span>
+                <p className="error">{errors.password}</p>
               )}
             </div>
             <div className="form-btn">
               <button className="form-submit-btn" disabled={isSubmitting}>
-                Reset Password
+                Login
               </button>
+            </div>
+            <div className="form-lower-text">
+              <p className="forgot-password">
+                <Link to="/forgot-password"> Forgot Password?</Link>
+              </p>
+              <span>
+                <Link to="/register">Have an account</Link>
+              </span>
             </div>
           </div>
         </form>
@@ -81,4 +106,4 @@ function PassResetForm() {
   );
 }
 
-export default PassResetForm;
+export default Login;

@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.scss";
-import { resetSchema } from "../schemas/Index.jsx";
+
 import { useFormik } from "formik";
+import { resetSchema } from "../../components/schemas/Index";
 
 function PasswordReset() {
   const onSubmit = (values, actions) => {

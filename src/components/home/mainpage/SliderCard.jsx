@@ -9,13 +9,13 @@ function SliderCard() {
     dots: true,
     infinite: true,
     speed: 500,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     appendDots: (dots) => {
-      return <ul  style={{ margin: "0px" }}>{dots}</ul>;
+      return <ul style={{ margin: "0px" }}>{dots}</ul>;
     },
-    
   };
 
   return (

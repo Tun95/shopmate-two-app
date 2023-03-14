@@ -18,8 +18,8 @@ import {
   useFormContext,
 } from "react-hook-form";
 import { useFormik } from "formik";
-import { billingSchema } from "../components/schemas/Index";
-import ShippingAddress from "../components/stepper/ShippingAddress";
+import { billingSchema } from "../../components/schemas/Index";
+import ShippingAddress from "../../components/stepper/ShippingAddress";
 
 // const useStyles = makeStyles((theme) => ({
 //   button: {

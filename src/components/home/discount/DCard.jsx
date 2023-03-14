@@ -1,14 +1,14 @@
 import React from "react";
-import Tdata from "./Tdata";
+import Ddata from "./Ddata";
 import Slider from "react-slick";
-import "./styles.css";
 
-function TopCard() {
+function DCard() {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    arrows: false,
+    slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
     responsive: [
@@ -30,7 +30,7 @@ function TopCard() {
         },
       },
       {
-        breakpoint: 580,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -41,15 +41,13 @@ function TopCard() {
   return (
     <>
       <Slider {...settings}>
-        {Tdata.map((item, index) => (
+        {Ddata.map((item, index) => (
           <div className="box product" key={index}>
-            <div className="nametop d_flex">
-              <span className="tleft">{item.name}</span>
-              <span className="tright">{item.desc}</span>
-            </div>
             <div className="img">
               <img src={item.cover} alt="" />
             </div>
+            <h4>{item.name}</h4>
+            <span>${item.price}</span>
           </div>
         ))}
       </Slider>
@@ -57,4 +55,4 @@ function TopCard() {
   );
 }
 
-export default TopCard;
+export default DCard;

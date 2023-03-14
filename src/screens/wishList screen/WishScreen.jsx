@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import StoreData from "../components/store/StoreData";
-import Wish from "../components/wish/Wish";
+import StoreData from "../../components/store/StoreData";
+import Wish from "../../components/wish list/Wish";
 
 function WishScreen() {
   const { shopItems } = StoreData;

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import { Formik, ErrorMessage, Field, Form } from "formik";
-import { basicSchema } from "../schemas/Index.jsx";
+
 import { Icon } from "react-icons-kit";
 import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";
+import { basicSchema } from "../../components/schemas/Index";
 
 function Register() {
   const initialValues = {

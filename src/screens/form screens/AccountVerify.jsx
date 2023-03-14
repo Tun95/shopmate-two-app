@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import React from "react";
-import { otpSchema } from "../schemas/Index";
+import { otpSchema } from "../../components/schemas/Index";
+
 import "./style.scss";
 
 function AccountVerify() {

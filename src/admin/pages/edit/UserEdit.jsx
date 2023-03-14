@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import DriveFolderUploadIcon from "@mui/icons-material/DriveFolderUpload";
 import { Helmet } from "react-helmet-async";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 function UserEdit() {
   const [file, setFile] = useState();
+   const [phone, setPhone] = useState("");
+
   return (
     <>
       <Helmet>
-        <title>User Edit</title>
+        <title>Edit User Info</title>
       </Helmet>
       <div className="container">
         <div className="userEdit">
@@ -25,8 +29,8 @@ function UserEdit() {
             </div>
             <div className="right">
               <form action="">
-                <div className="formInput">
-                  <label htmlFor="file">
+                <div className="formInput ">
+                  <label htmlFor="file" className="formInputLabel">
                     Image: <DriveFolderUploadIcon className="icon" />
                   </label>
                   <input
@@ -38,24 +42,26 @@ function UserEdit() {
                 </div>
 
                 <div className="formInput">
-                  <label htmlFor="">First Name</label>
-                  <input type="name" placeholder="first name" />
-                </div>
-                <div className="formInput">
-                  <label htmlFor="lastName">Last Name</label>
-                  <input
-                    type="name"
-                    id="lastName"
-                    placeholder="tunji@gmail.com"
-                  />
-                </div>
-                <div className="formInput">
-                  <label htmlFor="">Phone</label>
-                  <input type="text" placeholder="+1 234 34 5465" />
+                  <label htmlFor="name">First Name</label>
+                  <input type="name" placeholder="first name" id="name" />
                 </div>
                 <div className="formInput">
                   <label htmlFor="">Email</label>
                   <input type="email" placeholder="tunji@gmail.com" />
+                </div>
+                <div className="formInput">
+                  <label htmlFor="">Phone</label>
+                  {/* <input type="text" placeholder="+1 234 34 5465" /> */}
+                  <PhoneInput
+                    placeholder="Enter phone number"
+                    className="phoneInput"
+                    value={phone}
+                    onChange={setPhone}
+                  />
+                </div>
+                <div className="formInput">
+                  <label htmlFor="">Password</label>
+                  <input type="password" />
                 </div>
                 <div className="formInput">
                   <label htmlFor="">Address</label>
@@ -65,13 +71,15 @@ function UserEdit() {
                   <label htmlFor="">Country</label>
                   <input type="text" placeholder="USA" />
                 </div>
-                <div className="formInput formUserType">
-                  <input type="checkbox" id="isAdmin" />
-                  <label htmlFor="isAdmin">IsAdmin</label>
-                  <input type="checkbox" id="isSeller" />
-                  <label htmlFor="isSeller">IsSeller</label>
+                <div className="formInput formUserType d_flex">
+                  <span className="checkBox a_flex ">
+                    <input type="checkbox" id="isAdmin" />
+                    <label htmlFor="isAdmin">IsAdmin</label>
+                    <input type="checkbox" id="isSeller" />
+                    <label htmlFor="isSeller">IsSeller</label>
+                  </span>
+                  <button type="submit">Update</button>
                 </div>
-                <button>Update</button>
               </form>
             </div>
           </div>

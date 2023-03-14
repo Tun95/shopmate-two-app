@@ -2,12 +2,12 @@ import React from "react";
 import Chart from "../../components/chart/Chart";
 import List from "../../components/table/Table";
 import { Link } from "react-router-dom";
-import "./single.scss";
+import "./styles.scss";
 
 function UserInfo() {
   return (
     <div className="container">
-      <div className="utop">
+      <div className="utop ">
         <div className="left">
           <div className="editButton">
             <Link to={`/admin/user/76765/edit`}>Edit</Link>

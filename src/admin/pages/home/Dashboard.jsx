@@ -4,7 +4,7 @@ import Chart from "../../components/chart/Chart";
 import Featured from "../../components/featured/Featured";
 import Table from "../../components/table/Table";
 import Widget from "../../components/widget/Widget";
-import "./dashboard.scss";
+import "./styles.scss";
 
 function Dashboard() {
   return (

@@ -1,7 +1,9 @@
 .wrapper {
   text-align: center;
 }
-
+.wrapper .grid2 {
+  grid-gap: 20px;
+}
 .wrapper .img {
   margin: auto;
   width: 70px;
@@ -14,6 +16,7 @@
 }
 .wrapper .product {
   padding: 30px;
+  margin: 0px;
 }
 .wrapper .product h3 {
   font-weight: 500;
@@ -23,23 +26,18 @@
   margin-top: 20px;
   color: grey;
 }
-
-@media screen and (max-width: 850px) {
-  .wrapper .container {
-    display: grid;
-    width: 100%;
-    justify-content: center;
-  }
+@media screen and (max-width: 1024px) {
   .wrapper-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .wrapper-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 550px) {
   .wrapper-grid {
     grid-template-columns: 1fr;
   }

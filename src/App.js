@@ -1,29 +1,29 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./common/header/Header";
-import Home from "./pages/Home";
-import Data from "./components/flashdeals/data";
+import Home from "./screens/home screen/Home"
+import Data from "./components/home/flashdeals/data";
 import { useContext, useState } from "react";
 import Cart from "./common/cart/Cart";
 import Footer from "./common/footer/Footer";
-import StorePages from "./pages/StorePages";
-import ProductDetails from "./pages/ProductDetails";
+import StorePages from "./screens/store screen/StorePages";
+import ProductDetails from "./screens/productDetails screen/ProductDetails";
 import Dashboard from "./admin/pages/home/Dashboard";
 import ProductList from "./admin/pages/list/ProductList";
 import UserList from "./admin/pages/list/UserList";
 
 import UserInfo from "./admin/pages/single/UserInfo";
 import NewUser from "./admin/pages/new/NewUser";
-import "./style/dark.scss";
+import "./theme style/dark.scss";
 import { DarkModeContext } from "./context/darkModeContext";
-import OrderHistoryScreen from "./pages/OrderHistoryScreen";
-import Login from "./components/forms/Login";
-import Register from "./components/forms/Register";
-import Contact from "./components/forms/Contact";
-import PasswordReset from "./components/forms/PasswordReset";
-import AccountVerify from "./components/forms/AccountVerify";
-import PassResetForm from "./components/forms/PassResetForm";
-import VerifySuccess from "./components/forms/VerifySuccess";
+import OrderHistoryScreen from "./screens/order screens/OrderHistoryScreen";
+import Login from "./screens/form screens/Login";
+import Register from "./screens/form screens/Register";
+import Contact from "./screens/form screens/Contact";
+import PasswordReset from "./screens/form screens/PasswordReset";
+import AccountVerify from "./screens/form screens/AccountVerify";
+import PassResetForm from "./screens/form screens/PassResetForm";
+import VerifySuccess from "./screens/form screens/VerifySuccess";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 import { MessengerChat } from "react-messenger-chat-plugin";
@@ -34,8 +34,8 @@ import ShippingAddress from "./components/stepper/ShippingAddress";
 import Confirmation from "./components/stepper/Confirmation";
 import Payment from "./components/stepper/Payment";
 import Finish from "./components/stepper/Finnish";
-import UserProfile from "./pages/UserProfile";
-import VendorProfile from "./pages/VendorProfile";
+import UserProfile from "./screens/profile screens/UserProfile";
+import VendorProfile from "./screens/profile screens/VendorProfile";
 import Privacy from "./components/about/Privacy";
 import Terms from "./components/about/Terms";
 import OurStores from "./components/about/OurStores";
@@ -43,7 +43,7 @@ import UserEdit from "./admin/pages/edit/UserEdit";
 import ProductEdit from "./admin/pages/edit/ProductEdit";
 import NewProduct from "./admin/pages/new/NewProduct";
 import OrderList from "./admin/pages/list/OrderList";
-import WishScreen from "./pages/WishScreen";
+import WishScreen from "./screens/wishList screen/WishScreen";
 
 function App() {
   const { productItems } = Data;

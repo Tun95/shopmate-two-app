@@ -1,9 +1,10 @@
 import { useFormik } from "formik";
 import React, { useRef, useState } from "react";
-import { contactSchema } from "../schemas/Index";
+
 import JoditEditor from "jodit-react";
 import { Helmet } from "react-helmet-async";
 import "./style.scss";
+import { contactSchema } from "../../components/schemas/Index";
 
 function Contact() {
   const editor = useRef(null);

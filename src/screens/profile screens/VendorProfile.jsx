@@ -1,5 +1,5 @@
 import React from "react";
-import Vendor from "../components/profile/Vendor";
+import Vendor from "../../components/profile/Vendor";
 
 function VendorProfile() {
   return (

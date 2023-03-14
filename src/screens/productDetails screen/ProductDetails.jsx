@@ -1,7 +1,7 @@
 import React from "react";
-import Details from "../components/productdetails/Details";
-import Related from "../components/productdetails/Related";
-import ReviewDesc from "../components/productdetails/ReviewDesc";
+import Details from "../../components/productdetails/Details";
+import Related from "../../components/productdetails/Related";
+import ReviewDesc from "../../components/productdetails/ReviewDesc";
 
 function ProductDetails({ productItems, onAdd }) {
   return (
