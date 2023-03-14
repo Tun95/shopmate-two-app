@@ -64,9 +64,13 @@ function Head() {
         <div className="container a_flex head-position">
           <div className="left row ">
             <i className="fa fa-phone"></i>
-            <label htmlFor="">+8889 363 8868</label>
+            <label htmlFor="">
+              <a href="tel:+8889 363 8868">+8889 363 8868</a>
+            </label>
             <i className="fa fa-envelope"></i>
-            <label htmlFor="">admin@example.com</label>
+            <label htmlFor="">
+              <a href="mailto:admin@example.com">admin@example.com</a>
+            </label>
           </div>
           <div className="right row RText topbar">
             <label htmlFor="">Theme FAQ's</label>

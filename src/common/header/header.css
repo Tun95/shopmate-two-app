@@ -4,6 +4,9 @@
   height: 40px;
   color: #fff;
 }
+.head a {
+  color: #fff;
+}
 .head .head-position {
   position: relative;
   bottom: 5px;

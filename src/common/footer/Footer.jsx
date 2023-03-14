@@ -72,8 +72,12 @@ function Footer() {
               <li>
                 70 Washington Square South, New York, NY 10012, United States
               </li>
-              <li>Email: admin@example.com</li>
-              <li>Phone: +8889 363 8868</li>
+              <li>
+                Email: <a href="mailto:admin@example.com">admin@example.com</a>
+              </li>
+              <li>
+                Phone: <a href="tel:+8889 363 8868">+8889 363 8868</a>
+              </li>
             </ul>
           </div>
         </div>
