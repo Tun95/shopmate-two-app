@@ -45,7 +45,7 @@ footer li {
     margin-top: 10px;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   .footer-wrap {
     grid-template-columns: repeat(3, 1fr);
   }
