@@ -7,6 +7,7 @@ function Card() {
   const settings = {
     dots: true,
     infinite: true,
+    arrows: false,
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 1,
