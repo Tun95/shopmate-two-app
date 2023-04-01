@@ -6,6 +6,26 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-bg: #f5faff;
+  --color-background: #fafcff;
+  --color-bg-reg-form: #f7f7f7;
+  --color-primary: #e94560;
+  --color-text: #152c5b;
+  --color-text-dull: #8a95ad;
+  --color-black: #111;
+  --color-white: #fff;
+  --color-gray: #6c6c6c;
+  --color-light-gray: #b4b4b4;
+  --transition: all 400ms ease;
+  --box-shadow: 0 33px 40px 0 hsla(0, 0%, 73.3%, 0.1);
+  --light-shadow: rgb(3 0 71 / 5%) 0px 1px 3px;
+  --border-sty: 1px solid #ebebeb;
+  --container-width-lg: 73%;
+  --container-width-md: 85%;
+  --container-width-sm: 98%;
+}
+
 .app {
   overflow: hidden;
 }
