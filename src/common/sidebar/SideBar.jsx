@@ -184,6 +184,7 @@ function SideBar() {
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
+            className="side_bar_drawer"
           >
             {list(anchor)}
             <span className="side_bar_search p_flex">
